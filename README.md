@@ -75,14 +75,19 @@ Gestura/
 
 3. **Install dependencies**
    
-   **Option A: Using requirements.txt (Recommended)**
+   **Option A: Install from `pyproject.toml` (Recommended)**
    
-   The `requirements.txt` file contains all necessary Python packages with their compatible versions. Install them with a single command:
+   The project dependencies are defined in `pyproject.toml`. Install them with:
    ```bash
-   pip install -r requirements.txt
+   pip install -e .
    ```
    
-   This will automatically install all dependencies listed in the file, including:
+   Or, to install without editable mode:
+   ```bash
+   pip install .
+   ```
+   
+   This will automatically install all required packages, including:
    - opencv-python
    - mediapipe
    - dearpygui
